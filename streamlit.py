@@ -3,7 +3,6 @@ from streamlit_drawable_canvas import st_canvas
 import tensorflow as tf
 import numpy as np
 import cv2
-from PIL import Image
 import matplotlib.pyplot as plt
 
 # Load the enhanced model
@@ -109,7 +108,9 @@ if canvas_result.image_data is not None:
         ax.set_ylabel("Probability", fontsize=12, fontweight='bold')
         ax.set_title("Model Confidence per Digit", fontsize=16, fontweight='bold', color="#4B0082")
         st.pyplot(fig)
-    
+
+    except IndexError as e:
+        st.error("An error occurred: Tried to access an index that doesn't exist.")
     except Exception as e:
         st.error(f"An error occurred during prediction: {str(e)}")
 
