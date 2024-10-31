@@ -4,6 +4,7 @@ tensorflow
 numpy
 opencv-python
 Pillow
+opencv-python-headless
 matplotlib
 seaborn
 scikit-learn
