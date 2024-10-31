@@ -86,19 +86,14 @@ if canvas_result.image_data is not None:
         img = img / 255.0  # Normalize
         img = np.expand_dims(img, axis=(0, -1))  # Reshape to (1, 28, 28, 1)
 
-        # Debugging: Print shape of the input image
-        st.write("Input Image Shape:", img.shape)
-
         st.markdown('<div class="plot-container"><h3>🖼️ Processed Input Image:</h3></div>', unsafe_allow_html=True)
         st.image(img.squeeze(), width=150)
 
         # Predict the digit
         prediction = model.predict(img)
-        
-        # Debugging: Print the prediction output
-        st.write("Model Prediction Output:", prediction)
 
-        if prediction is not None:
+        # Check if prediction is a valid output
+        if prediction.size > 0:
             predicted_class = np.argmax(prediction, axis=1)[0]
             confidence = np.max(prediction) * 100
 
@@ -117,7 +112,7 @@ if canvas_result.image_data is not None:
             ax.set_title("Model Confidence per Digit", fontsize=16, fontweight='bold', color="#4B0082")
             st.pyplot(fig)
         else:
-            st.error("Prediction returned None. Please check the model and input data.")
+            st.error("Prediction returned empty. Please check the model and input data.")
 
     except IndexError as e:
         st.error("An error occurred: Tried to access an index that doesn't exist.")
