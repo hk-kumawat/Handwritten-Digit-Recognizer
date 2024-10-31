@@ -79,35 +79,39 @@ with col2:
 
 # Predict only if there's input on the canvas
 if canvas_result.image_data is not None:
-    # Preprocess the image from the canvas
-    img = canvas_result.image_data
-    img = cv2.resize(img, (28, 28))  # Resize to 28x28
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # Convert to grayscale
-    img = img / 255.0  # Normalize
-    img = np.expand_dims(img, axis=(0, -1))  # Reshape to (1, 28, 28, 1)
+    try:
+        # Preprocess the image from the canvas
+        img = canvas_result.image_data
+        img = cv2.resize(img, (28, 28))  # Resize to 28x28
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # Convert to grayscale
+        img = img / 255.0  # Normalize
+        img = np.expand_dims(img, axis=(0, -1))  # Reshape to (1, 28, 28, 1)
 
-    st.markdown('<div class="plot-container"><h3>🖼️ Processed Input Image:</h3></div>', unsafe_allow_html=True)
-    st.image(img.squeeze(), width=150)
+        st.markdown('<div class="plot-container"><h3>🖼️ Processed Input Image:</h3></div>', unsafe_allow_html=True)
+        st.image(img.squeeze(), width=150)
 
-    # Predict the digit
-    prediction = model.predict(img)
-    predicted_class = np.argmax(prediction, axis=1)[0]
-    confidence = np.max(prediction) * 100
+        # Predict the digit
+        prediction = model.predict(img)
+        predicted_class = np.argmax(prediction, axis=1)[0]
+        confidence = np.max(prediction) * 100
 
-    # Display the prediction with a custom style
-    st.markdown(f'<div class="prediction-box">Predicted Digit: {predicted_class}</div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="confidence-text">Confidence Level: {confidence:.2f}%</div>', unsafe_allow_html=True)
+        # Display the prediction with a custom style
+        st.markdown(f'<div class="prediction-box">Predicted Digit: {predicted_class}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="confidence-text">Confidence Level: {confidence:.2f}%</div>', unsafe_allow_html=True)
 
-    # Display the prediction probabilities bar chart
-    st.markdown("### 🔢 Prediction Probabilities")
-    fig, ax = plt.subplots()
-    bars = ax.bar(range(10), prediction[0], color="#4682B4", edgecolor="#4682B4")
-    bars[predicted_class].set_color("#32CD32")  # Highlight the predicted digit
-    ax.set_xticks(range(10))
-    ax.set_xlabel("Digit", fontsize=12, fontweight='bold')
-    ax.set_ylabel("Probability", fontsize=12, fontweight='bold')
-    ax.set_title("Model Confidence per Digit", fontsize=16, fontweight='bold', color="#4B0082")
-    st.pyplot(fig)
+        # Display the prediction probabilities bar chart
+        st.markdown("### 🔢 Prediction Probabilities")
+        fig, ax = plt.subplots()
+        bars = ax.bar(range(10), prediction[0], color="#4682B4", edgecolor="#4682B4")
+        bars[predicted_class].set_color("#32CD32")  # Highlight the predicted digit
+        ax.set_xticks(range(10))
+        ax.set_xlabel("Digit", fontsize=12, fontweight='bold')
+        ax.set_ylabel("Probability", fontsize=12, fontweight='bold')
+        ax.set_title("Model Confidence per Digit", fontsize=16, fontweight='bold', color="#4B0082")
+        st.pyplot(fig)
+    
+    except Exception as e:
+        st.error(f"An error occurred during prediction: {str(e)}")
 
 # Footer with developer name
 st.markdown('<div class="footer">Developed by - Harshal Kumawat</div>', unsafe_allow_html=True)
