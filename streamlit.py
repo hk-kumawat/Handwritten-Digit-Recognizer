@@ -22,7 +22,7 @@ st.markdown(
     }
     .subtitle {
         font-size: 20px;
-        color: #FFFFFF;  /* Updated to white */
+        color: #FFFFFF;
         text-align: center;
         margin-bottom: 30px;
     }
@@ -54,17 +54,16 @@ st.markdown(
         margin-top: 50px;
     }
     </style>
-    """,
+    """, 
     unsafe_allow_html=True
 )
 
 # Title and instructions with emojis
-st.markdown('<div class="title">🎨 Handwritten Digit Recognition 🔍</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">Draw a digit below, and our AI will guess it with confidence! 🤖✨</div>', unsafe_allow_html=True)
+st.markdown('<div class="title">Handwritten Digit Recognition</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle">Draw a digit below, and our AI will guess it with confidence! ✨</div>', unsafe_allow_html=True)
 
 # Create a centered layout for the canvas and predictions
 col1, col2, col3 = st.columns([1, 2, 1])
-
 with col2:
     # Create a canvas for user input
     canvas_result = st_canvas(
@@ -78,7 +77,7 @@ with col2:
     )
 
 # Predict only if there's input on the canvas
-if canvas_result.image_data is not None:
+if canvas_result and canvas_result.image_data is not None:
     # Preprocess the image from the canvas
     img = canvas_result.image_data
     img = cv2.resize(img, (28, 28))  # Resize to 28x28
@@ -86,7 +85,7 @@ if canvas_result.image_data is not None:
     img = img / 255.0  # Normalize
     img = np.expand_dims(img, axis=(0, -1))  # Reshape to (1, 28, 28, 1)
 
-    st.markdown('<div class="plot-container"><h3>🖼️ Processed Input Image:</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="plot-container"><h3>️Processed Input Image:</h3></div>', unsafe_allow_html=True)
     st.image(img.squeeze(), width=150)
 
     # Predict the digit
@@ -99,10 +98,10 @@ if canvas_result.image_data is not None:
     st.markdown(f'<div class="confidence-text">Confidence Level: {confidence:.2f}%</div>', unsafe_allow_html=True)
 
     # Display the prediction probabilities bar chart
-    st.markdown("### 🔢 Prediction Probabilities")
+    st.markdown("### Prediction Probabilities")
     fig, ax = plt.subplots()
     bars = ax.bar(range(10), prediction[0], color="#4682B4", edgecolor="#4682B4")
-    bars[predicted_class].set_color("#32CD32")  # Highlight the predicted digit
+    bars[predicted_class].set_color("#32CD32")  # Highlight
     ax.set_xticks(range(10))
     ax.set_xlabel("Digit", fontsize=12, fontweight='bold')
     ax.set_ylabel("Probability", fontsize=12, fontweight='bold')
