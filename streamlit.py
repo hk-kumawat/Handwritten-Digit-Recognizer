@@ -22,25 +22,27 @@ canvas_result = st_canvas(
     key="canvas",
 )
 
-# Proceed only if there's image data in the canvas
+# Check if there is valid data in the canvas
 if canvas_result.image_data is not None:
-    # Check if the canvas is not empty
     if np.sum(canvas_result.image_data) > 0:
-        # Preprocess the image
-        img = canvas_result.image_data.astype('uint8')  # Ensure image is in uint8 format for OpenCV
-        img = cv2.resize(img, (28, 28))  # Resize to 28x28
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # Convert to grayscale
-        img = img / 255.0  # Normalize to [0,1]
-        img = np.expand_dims(img, axis=(0, -1))  # Reshape to (1, 28, 28, 1)
+        try:
+            # Preprocess the image
+            img = canvas_result.image_data.astype('uint8')  # Convert to uint8
+            img = cv2.resize(img, (28, 28))  # Resize to 28x28
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # Convert to grayscale
+            img = img / 255.0  # Normalize to [0,1]
+            img = np.expand_dims(img, axis=(0, -1))  # Reshape to (1, 28, 28, 1)
 
-        # Make prediction
-        prediction = model.predict(img)
-        predicted_class = np.argmax(prediction, axis=1)[0]
-        confidence = np.max(prediction) * 100
+            # Perform prediction
+            prediction = model.predict(img)
+            predicted_class = np.argmax(prediction, axis=1)[0]
+            confidence = np.max(prediction) * 100
 
-        # Display the prediction
-        st.write(f"**Predicted Digit:** {predicted_class}")
-        st.write(f"**Confidence Level:** {confidence:.2f}%")
+            # Display results
+            st.write(f"**Predicted Digit:** {predicted_class}")
+            st.write(f"**Confidence Level:** {confidence:.2f}%")
+        except Exception as e:
+            st.error(f"An error occurred during prediction: {str(e)}")
     else:
         st.warning("Please draw a digit on the canvas to get a prediction.")
 else:
