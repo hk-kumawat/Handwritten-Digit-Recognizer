@@ -1,12 +1,10 @@
 streamlit
-streamlit-drawable-canvas
 opencv-python
 Pillow
 matplotlib
 seaborn
 scikit-learn
-streamlit-drawable-canvas==0.8.0  # Ensure the correct version
-tensorflow
-numpy
-opencv-python-headless==4.8.0.74  # Headless version for compatibility
-
+streamlit-drawable-canvas==0.8.0
+tensorflow==2.13.0
+numpy==1.23.5  # Slightly older version known for compatibility
+opencv-python-headless==4.8.0.74
