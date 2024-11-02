@@ -7,9 +7,10 @@ import matplotlib.pyplot as plt
 
 # Load the model without displaying success message
 model_loaded = False
+
 try:
     model = tf.keras.models.load_model('mnist_model_enhanced.h5')
-    model_loaded = True
+    st.success("Model loaded successfully!")
 except Exception as e:
     st.error(f"Error loading model: {e}")
 
