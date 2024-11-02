@@ -1,4 +1,4 @@
-# Handwritten Digit Recognizer✍🏻
+# Handwritten Digit Recognizer✍🏻🔢
 ![sddefault](https://github.com/user-attachments/assets/7319a7b4-0ccd-4af0-b577-942fbd389da9)
 
 
@@ -96,7 +96,7 @@ The plots below illustrate the training and validation accuracy and loss over th
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/hk-kumawat/handwrittendigitrecognizer.git
+   https://github.com/hk-kumawat/Handwritten-Digit-Recognizer.git
    ```
 
 2. **Install dependencies**:
@@ -104,28 +104,49 @@ The plots below illustrate the training and validation accuracy and loss over th
    pip install -r requirements.txt
    ```
 
+   
 <br>
+
 
 ## Usage🚀
 
-1. **Train the model**: Run the Jupyter Notebook to train the CNN model on the MNIST dataset and save the trained model as `mnist_model.h5`.
-2. **Model Inference**:
+1. **Train the Model**: 
+   - Run the Jupyter Notebook to train the CNN model on the MNIST dataset.
+   - The initial model is saved as `mnist_model.h5`, which achieved a certain accuracy.
+
+2. **Enhanced Model**:
+   - After further enhancements, a refined model is saved as `mnist_model_enhanced.h5`, yielding improved accuracy.
+
+3. **Model Inference**:
    - Run the `streamlit.py` file to start the Streamlit app.
    - Draw a digit on the canvas and click "Predict" to see the model's prediction.
 
+
 <br>
+
 
 ## Technologies Used💻
 
-- Python
-- Libraries: `pandas`, `numpy`, `tensorflow`, `keras`, `streamlit`
-- Deployment: Streamlit for a web-based user interface
+- **Programming Language**: Python
+- **Libraries**: 
+  - `pandas`
+  - `numpy`
+  - `tensorflow`
+  - `keras`
+  - `streamlit`
+  - `streamlit_drawable_canvas`
+  - `seaborn`
+  - `opencv-python`
+  - `matplotlib`
+- **Deployment**: Streamlit for a web-based user interface
+
 
 <br>
 
+
 ## Results🏆
 
-- The model achieved high accuracy on the MNIST test dataset, effectively predicting handwritten digits with a robust CNN architecture.
+The model demonstrated impressive accuracy on the **MNIST test dataset**, achieving approximately `99.30%` validation accuracy. By leveraging a robust **Convolutional Neural Network (CNN)** architecture, it effectively predicts handwritten digits with minimal error. The model's performance was validated through metrics such as **accuracy** and **loss**, showcasing its ability to generalize well to unseen data.
 
 <br>
 
@@ -144,6 +165,12 @@ I’d love to hear from you! Feel free to reach out:
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Harshal%20Kumawat-blue?logo=linkedin)](https://www.linkedin.com/in/harshal-kumawat/) 🌐 — Let’s connect professionally.
 - [![Email](https://img.shields.io/badge/Email-harshalkumawat100@gmail.com-blue?logo=gmail)](mailto:harshalkumawat100@gmail.com) 📧 — Send me an email for any in-depth discussions.
 
+<br>
+
 ---
 
-Feel free to adjust this template as needed for your specific setup, especially the demo links, screenshots, and additional project insights!
+
+## Thanks for exploring this project! 🔢
+
+> "Turning each stroke of creativity into a recognizable digit, one digit at a time." – Anonymous
+
