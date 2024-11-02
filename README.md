@@ -63,9 +63,39 @@ Try out the Handwritten Digit Recognizer! 👉🏻 [![Experience It! 🌟](https
 
 ## Evaluation📈
 
-The model is evaluated using:
-- **Accuracy**: Measures overall performance by comparing correct predictions to total predictions.
-- **Loss**: Tracks the model's error during training and testing.
+Here's a final version of the Evaluation section for your Handwritten Digit Recognizer README, incorporating training and validation metrics:
+
+---
+
+## Evaluation📈
+
+You can definitely use the latest version provided, as it incorporates a clear explanation of the evaluation metrics along with a summary of the results, making it comprehensive and informative. Here’s a refined version, including the mention of the plots for accuracy and loss:
+
+---
+
+## Evaluation📈
+
+The model is evaluated using the following metrics:
+
+- **Accuracy**: Measures the overall performance of the model by calculating the ratio of correct predictions to the total number of predictions. The model achieved a training accuracy of approximately 97.06% and a validation accuracy of approximately 99.30%, indicating excellent performance on both the training and validation datasets.
+
+- **Loss**: Tracks the model's error during training and testing, utilizing categorical cross-entropy for this multi-class classification task. The training loss decreased to around 0.0985, while the validation loss reached about 0.0221, suggesting that the model is effectively learning from the data and generalizing well to unseen examples.
+
+### Training Summary:
+- **Epochs**: 10
+- **Final Training Accuracy**: 97.06%
+- **Final Validation Accuracy**: 99.30%
+- **Final Training Loss**: 0.0985
+- **Final Validation Loss**: 0.0221
+
+### Accuracy and Loss Plots
+The plots below illustrate the training and validation accuracy and loss over the epochs, demonstrating the model's performance improvement throughout the training process.
+
+- **Model Accuracy and Loss**:
+
+![Screenshot 2024-11-02 205054](https://github.com/user-attachments/assets/e38c8e13-10a5-48eb-8b52-52f7ad9849e1)
+
+
 
 <br>
 
