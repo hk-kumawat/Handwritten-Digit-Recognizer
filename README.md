@@ -106,20 +106,39 @@ The plots below illustrate the training and validation accuracy and loss over th
 
 <br>
 
+
 ## Usage🚀
 
-1. **Train the model**: Run the Jupyter Notebook to train the CNN model on the MNIST dataset and save the trained model as `mnist_model.h5`.
-2. **Model Inference**:
+1. **Train the Model**: 
+   - Run the Jupyter Notebook to train the CNN model on the MNIST dataset.
+   - The initial model is saved as `mnist_model.h5`, which achieved a certain accuracy.
+
+2. **Enhanced Model**:
+   - After further enhancements, a refined model is saved as `mnist_model_enhanced.h5`, yielding improved accuracy.
+
+3. **Model Inference**:
    - Run the `streamlit.py` file to start the Streamlit app.
    - Draw a digit on the canvas and click "Predict" to see the model's prediction.
 
+
 <br>
+
 
 ## Technologies Used💻
 
-- Python
-- Libraries: `pandas`, `numpy`, `tensorflow`, `keras`, `streamlit`
-- Deployment: Streamlit for a web-based user interface
+- **Programming Language**: Python
+- **Libraries**: 
+  - `pandas`
+  - `numpy`
+  - `tensorflow`
+  - `keras`
+  - `streamlit`
+  - `streamlit_drawable_canvas`
+  - `seaborn`
+  - `opencv-python`
+  - `matplotlib`
+- **Deployment**: Streamlit for a web-based user interface
+
 
 <br>
 
