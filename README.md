@@ -97,13 +97,14 @@ The plots below illustrate the training and validation accuracy and loss over th
 1. **Clone the repository**:
    ```bash
    https://github.com/hk-kumawat/Handwritten-Digit-Recognizer.git
-  ```
+   ```
 
 2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
+   
 <br>
 
 
