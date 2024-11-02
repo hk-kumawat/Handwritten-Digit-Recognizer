@@ -77,7 +77,6 @@ with col2:
     )
 
 # Check for image data on the canvas before proceeding
-# Check for image data on the canvas before proceeding
 if canvas_result.image_data is not None:
     # Check if the canvas is not completely blank
     if np.sum(canvas_result.image_data) > 0:
@@ -96,7 +95,7 @@ if canvas_result.image_data is not None:
             prediction = model.predict(img)
 
             # Check if prediction is a valid output
-            if prediction is not None and prediction.size > 0:
+            if prediction.size > 0:
                 predicted_class = np.argmax(prediction, axis=1)[0]
                 confidence = np.max(prediction) * 100
 
@@ -123,3 +122,6 @@ if canvas_result.image_data is not None:
             st.error(f"An error occurred during prediction: {str(e)}")
     else:
         st.warning("Please draw a digit on the canvas to get a prediction.")
+
+# Footer with developer name
+st.markdown('<div class="footer">Developed by - Harshal Kumawat</div>', unsafe_allow_html=True)
