@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 try:
     model = tf.keras.models.load_model('mnist_model_enhanced.h5')
 except Exception as e:
-    st.error(f"Error loading model: {e}")
+    st.error("")
     model = None  # Ensure model is None if loading fails
 
 # Custom CSS for styling
