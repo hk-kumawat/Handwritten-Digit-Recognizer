@@ -1,4 +1,4 @@
-# Handwritten Digit Recognizer✍🏻
+# Handwritten Digit Recognizer✍🏻🔢
 ![sddefault](https://github.com/user-attachments/assets/7319a7b4-0ccd-4af0-b577-942fbd389da9)
 
 
@@ -123,9 +123,10 @@ The plots below illustrate the training and validation accuracy and loss over th
 
 <br>
 
+
 ## Results🏆
 
-- The model achieved high accuracy on the MNIST test dataset, effectively predicting handwritten digits with a robust CNN architecture.
+The model demonstrated impressive accuracy on the **MNIST test dataset**, achieving approximately `99.30%` validation accuracy. By leveraging a robust **Convolutional Neural Network (CNN)** architecture, it effectively predicts handwritten digits with minimal error. The model's performance was validated through metrics such as **accuracy** and **loss**, showcasing its ability to generalize well to unseen data.
 
 <br>
 
@@ -144,6 +145,12 @@ I’d love to hear from you! Feel free to reach out:
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Harshal%20Kumawat-blue?logo=linkedin)](https://www.linkedin.com/in/harshal-kumawat/) 🌐 — Let’s connect professionally.
 - [![Email](https://img.shields.io/badge/Email-harshalkumawat100@gmail.com-blue?logo=gmail)](mailto:harshalkumawat100@gmail.com) 📧 — Send me an email for any in-depth discussions.
 
+<br>
+
 ---
 
-Feel free to adjust this template as needed for your specific setup, especially the demo links, screenshots, and additional project insights!
+
+## Thanks for exploring this project! 🔢
+
+> "Turning each stroke of creativity into a recognizable digit, one digit at a time." – Anonymous
+
