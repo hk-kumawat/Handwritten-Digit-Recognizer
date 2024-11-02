@@ -138,4 +138,4 @@ else:
     st.warning("The model could not be loaded, so predictions are unavailable at this time.")
 
 # Footer with developer name
-st.markdown('<div class="footer">Developed by - Harshal Kumawat</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">🤖 Brought to Life by - Harshal Kumawat 🧑🏻‍💻</div>', unsafe_allow_html=True)
