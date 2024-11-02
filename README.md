@@ -1,6 +1,6 @@
-# Handwritten-Digit-Recognizer✍️
+# Handwritten Digit Recognizer✍🏻
+![sddefault](https://github.com/user-attachments/assets/7319a7b4-0ccd-4af0-b577-942fbd389da9)
 
-![Handwritten Digit Recognition](https://github.com/user-attachments/assets/handwritten_digit_recognizer.png)
 
 ## Overview
 
@@ -8,13 +8,17 @@ The Handwritten Digit Recognizer project uses a Convolutional Neural Network (CN
 
 ## Live Demo
 
-Try out the Handwritten Digit Recognizer! 👉🏻 [![Experience It! 🌟](https://img.shields.io/badge/Experience%20It!-blue)](your-streamlit-link)
+Try out the Handwritten Digit Recognizer! 👉🏻 [![Experience It! 🌟](https://img.shields.io/badge/Experience%20It!-blue)](https://handwrittendigitpredictor.streamlit.app/)
 
 <br>
 
-- _Below is a preview of the Handwritten Digit Recognizer in action. Draw a digit to see its prediction!_ 👇🏻
+ _Below is a preview of the Handwritten Digit Recognizer in action. Draw a digit to see its prediction!_ 👇🏻
 
-![Screenshot](https://github.com/user-attachments/assets/handwritten_digit_recognizer_preview.png)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/efda2ef5-790e-401b-abb0-b4322088a3f9" alt="house">
+</p>
+
+<br>
 
 ## Table of Contents
 
@@ -36,7 +40,7 @@ Try out the Handwritten Digit Recognizer! 👉🏻 [![Experience It! 🌟](https
 
 - Real-time digit recognition on a Streamlit interface with a drawable canvas.
 - Provides predictions for handwritten digits (0–9).
-- Utilizes a CNN model trained on 70,000 MNIST dataset images.
+- Utilizes a CNN model trained on 70,000 MNIST dataset images, ensuring reliable performance in digit classification.
 
 <br>
 
@@ -56,37 +60,26 @@ Try out the Handwritten Digit Recognizer! 👉🏻 [![Experience It! 🌟](https
 
 ## Model Training🧠
 
-- **Model Architecture**: Convolutional Neural Network (CNN) with layers to extract features from handwritten images.
-- **Training**: Model is trained using the MNIST dataset, with data augmentation and early stopping to improve generalization.
+- **Model Architecture**: The model is based on a Convolutional Neural Network (CNN), designed with multiple layers to effectively extract features from handwritten digit images.
+
+- **Training Process**: The model is trained using the MNIST dataset, incorporating data augmentation techniques to enhance the diversity of training samples. Early stopping is also utilized to prevent overfitting, ensuring improved generalization to unseen data.
 
 <br>
 
 ## Evaluation📈
 
-Here's a final version of the Evaluation section for your Handwritten Digit Recognizer README, incorporating training and validation metrics:
-
----
-
-## Evaluation📈
-
-You can definitely use the latest version provided, as it incorporates a clear explanation of the evaluation metrics along with a summary of the results, making it comprehensive and informative. Here’s a refined version, including the mention of the plots for accuracy and loss:
-
----
-
-## Evaluation📈
-
 The model is evaluated using the following metrics:
 
-- **Accuracy**: Measures the overall performance of the model by calculating the ratio of correct predictions to the total number of predictions. The model achieved a training accuracy of approximately 97.06% and a validation accuracy of approximately 99.30%, indicating excellent performance on both the training and validation datasets.
+- **Accuracy**: Measures the overall performance of the model by calculating the ratio of correct predictions to the total number of predictions. The model achieved a training accuracy of approximately `97.06%` and a validation accuracy of approximately   `99.30%`, indicating excellent performance on both the training and validation datasets.
 
-- **Loss**: Tracks the model's error during training and testing, utilizing categorical cross-entropy for this multi-class classification task. The training loss decreased to around 0.0985, while the validation loss reached about 0.0221, suggesting that the model is effectively learning from the data and generalizing well to unseen examples.
+- **Loss**: Tracks the model's error during training and testing, utilizing categorical cross-entropy for this multi-class classification task. The training loss decreased to around `0.0985`, while the validation loss reached about `0.0221`, suggesting that the model is effectively learning from the data and generalizing well to unseen examples.
 
 ### Training Summary:
-- **Epochs**: 10
-- **Final Training Accuracy**: 97.06%
-- **Final Validation Accuracy**: 99.30%
-- **Final Training Loss**: 0.0985
-- **Final Validation Loss**: 0.0221
+- **Epochs**: `10`
+- **Final Training Accuracy**: `97.06%`
+- **Final Validation Accuracy**: `99.30%`
+- **Final Training Loss**: `0.0985`
+- **Final Validation Loss**: `0.0221`
 
 ### Accuracy and Loss Plots
 The plots below illustrate the training and validation accuracy and loss over the epochs, demonstrating the model's performance improvement throughout the training process.
