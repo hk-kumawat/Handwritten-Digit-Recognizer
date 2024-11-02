@@ -5,11 +5,14 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
+# Initialize model variable
+model = None
+
 # Load the enhanced model
 try:
     model = tf.keras.models.load_model('mnist_model_enhanced.h5')
 except Exception as e:
-    st.error("")
+    st.error("Failed to load model.")
 
 # Custom CSS for styling
 st.markdown(
