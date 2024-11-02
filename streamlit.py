@@ -21,7 +21,7 @@ st.markdown(
     }
     .subtitle {
         font-size: 20px;
-        color: #FFFFFF;  /* Updated to white */
+        color: #FFFFFF;
         text-align: center;
         margin-bottom: 30px;
     }
@@ -91,11 +91,11 @@ if canvas_result.image_data is not None:
             st.markdown('<div class="plot-container"><h3>🖼️ Processed Input Image:</h3></div>', unsafe_allow_html=True)
             st.image(img.squeeze(), width=150)
 
-            # Predict the digit
+            # Predict the digit and check the prediction array
             prediction = model.predict(img)
 
-            # Check if prediction is a valid output
-            if prediction.size > 0:
+            # Ensure that prediction contains valid data
+            if prediction is not None and prediction.size > 0:
                 predicted_class = np.argmax(prediction, axis=1)[0]
                 confidence = np.max(prediction) * 100
 
