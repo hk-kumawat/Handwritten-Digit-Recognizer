@@ -14,8 +14,7 @@ try:
 except Exception as e:
     st.error(f"Error loading model: {e}")
 
-# Proceed only if the model is loaded successfully
-if model_loaded:
+
     # Custom CSS for styling
     st.markdown(
         """
