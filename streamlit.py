@@ -5,14 +5,17 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-# Initialize model variable
-model = None
+# Load the enhanced model with caching to prevent repeated loading attempts
+@st.cache_resource
+def load_model():
+    try:
+        return tf.keras.models.load_model('mnist_model_enhanced.h5')
+    except Exception as e:
+        st.error("Failed to load model. Please check the model file and try again.")
+        return None
 
-# Load the enhanced model
-try:
-    model = tf.keras.models.load_model('mnist_model_enhanced.h5')
-except Exception as e:
-    st.error("Failed to load model.")
+# Load the model
+model = load_model()
 
 # Custom CSS for styling
 st.markdown(
@@ -82,7 +85,7 @@ with col2:
         key="canvas",
     )
 
-# Only proceed if the model was loaded successfully
+# Proceed with predictions only if the model is loaded successfully
 if model:
     # Check for image data on the canvas before proceeding
     if canvas_result.image_data is not None:
@@ -131,6 +134,8 @@ if model:
                     st.error(f"An error occurred during prediction: {str(e)}")
         else:
             st.warning("Please draw a digit on the canvas to get a prediction.")
+else:
+    st.warning("The model could not be loaded, so predictions are unavailable at this time.")
 
 # Footer with developer name
-st.markdown('<div class="footer">Developed by - Harshal Kumawat</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Developed by - Harshal Kumawat</div>', un
