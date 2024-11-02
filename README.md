@@ -96,8 +96,8 @@ The plots below illustrate the training and validation accuracy and loss over th
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/hk-kumawat/handwrittendigitrecognizer.git
-   ```
+   https://github.com/hk-kumawat/Handwritten-Digit-Recognizer.git
+  ```
 
 2. **Install dependencies**:
    ```bash
