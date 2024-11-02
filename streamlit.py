@@ -6,7 +6,12 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Load the enhanced model
-model = tf.keras.models.load_model('mnist_model_enhanced.h5')
+
+try:
+    model = tf.keras.models.load_model('mnist_model_enhanced.h5')
+    st.success("Model loaded successfully!")
+except Exception as e:
+    st.error(f"Error loading model: {e}")
 
 # Custom CSS for styling
 st.markdown(
