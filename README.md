@@ -32,7 +32,8 @@ Try out the Handwritten Digit Recognizer! 👉🏻 [![Experience It! 🌟](https
 8. [Technologies Used](#technologies-used)
 9. [Results](#results)
 10. [Conclusion](#conclusion)
-11. [Contact](#contact)
+11. [License](#license)
+12. [Contact](#contact)
 
 <br>
 
@@ -153,6 +154,12 @@ The model demonstrated impressive accuracy on the **MNIST test dataset**, achiev
 ## Conclusion📚
 
 The Handwritten Digit Recognizer demonstrates the effectiveness of CNNs in image recognition tasks. With a simple user interface, the project showcases how AI can transform handwritten input into digital data, supporting applications from education to automated systems.
+
+<br> 
+
+## License📝
+
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
 
 <br>
 
