@@ -138,8 +138,8 @@ else:
     st.warning("The model could not be loaded, so predictions are unavailable at this time.")
 
 # Footer section
-    st.markdown("---") 
-    st.markdown(
+st.markdown("---") 
+st.markdown(
         "<div style='text-align: center; color: #7f8c8d; font-size: 16px;'>"
         " 🤖 | Brought to Life by - Harshal Kumawat | 🧑🏻‍💻"
         "</div>",
