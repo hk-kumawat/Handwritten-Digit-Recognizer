@@ -7,4 +7,3 @@ streamlit-drawable-canvas
 tensorflow
 numpy
 opencv-python-headless
-cv2
