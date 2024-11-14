@@ -67,7 +67,7 @@ st.markdown(
 )
 
 # Title and instructions with emojis
-st.markdown('<div class="title">🎨 Handwritten Digit Recognition 🔍</div>', unsafe_allow_html=True)
+st.markdown('<div class="title">✍🏻 Handwritten Digit Recognition 🔍</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle">Draw a digit below, and our AI will guess it with confidence! 🤖✨</div>', unsafe_allow_html=True)
 
 # Create a centered layout for the canvas and predictions
@@ -137,7 +137,11 @@ if model:
 else:
     st.warning("The model could not be loaded, so predictions are unavailable at this time.")
 
-# Footer with developer name
-
-st.markdown("---")
-st.markdown('<div class="footer">🤖 Brought to Life by - Harshal Kumawat 🧑🏻‍💻</div>', unsafe_allow_html=True)
+# Footer section
+    st.markdown("---") 
+    st.markdown(
+        "<div style='text-align: center; color: #7f8c8d; font-size: 16px;'>"
+        " 🤖 | Brought to Life by - Harshal Kumawat | 🧑🏻‍💻"
+        "</div>",
+        unsafe_allow_html=True
+    )
