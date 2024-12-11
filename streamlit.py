@@ -13,7 +13,7 @@ def load_model():
     except Exception as e:
         st.error("Failed to load model. Please check the model file and try again.")
         return None
-
+ 
 # Load the model
 model = load_model()
 
