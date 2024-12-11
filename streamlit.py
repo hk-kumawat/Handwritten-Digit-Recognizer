@@ -13,7 +13,7 @@ def load_model():
     except Exception as e:
         st.error("Failed to load model. Please check the model file and try again.")
         return None
- 
+
 # Load the model
 model = load_model()
 
@@ -140,8 +140,6 @@ else:
 # Footer section
 st.markdown("---") 
 st.markdown(
-        "<div style='text-align: center; color: #7f8c8d; font-size: 16px;'>"
-        " 🤖 | Brought to Life by - Harshal Kumawat | 🧑🏻‍💻"
-        "</div>",
-        unsafe_allow_html=True
-    )
+    "<div class='footer'>🤖 | Brought to Life by - Harshal Kumawat | 🧑🏻‍💻</div>",
+    unsafe_allow_html=True
+)
