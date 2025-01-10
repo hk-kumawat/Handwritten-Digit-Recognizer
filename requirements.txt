@@ -6,4 +6,6 @@ scikit-learn
 streamlit-drawable-canvas
 tensorflow
 numpy
+opencv-python-headless
 opencv-python
+cv2
