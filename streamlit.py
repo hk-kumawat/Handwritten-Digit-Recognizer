@@ -30,7 +30,7 @@ st.markdown(
     }
     .subtitle {
         font-size: 20px;
-        color: #d3d3d3;
+        color: #FFFFFF;
         text-align: center;
         margin-bottom: 30px;
     }
@@ -57,9 +57,15 @@ st.markdown(
     }
     .footer {
         font-size: 15px;
-        color: #d3d3d3;
+        color: #a1aeb1;
         text-align: center;
         margin-top: 50px;
+    }
+    .draw-instruction {
+        font-size: 20px;
+        color: #a1aeb1;
+        text-align: center;
+        margin-bottom: 30px;
     }
     </style>
     """,
@@ -68,7 +74,7 @@ st.markdown(
 
 # Title and instructions with emojis
 st.markdown('<div class="title">✍🏻 Handwritten Digit Recognition 🔍</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">Draw a digit below, and our AI will guess it with confidence! 🤖✨</div>', unsafe_allow_html=True)
+st.markdown('<div class="draw-instruction">Draw a digit below, and our AI will guess it with confidence! 🤖✨</div>', unsafe_allow_html=True)
 
 # Create a centered layout for the canvas and predictions
 col1, col2, col3 = st.columns([1, 2, 1])
