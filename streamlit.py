@@ -57,13 +57,13 @@ st.markdown(
     }
     .footer {
         font-size: 15px;
-        color: #a1aeb1;
+        color: #a9a9a9;
         text-align: center;
         margin-top: 50px;
     }
-    .draw-instruction {
+    .instruction-text {
         font-size: 20px;
-        color: #a1aeb1;
+        color: #a9a9a9;
         text-align: center;
         margin-bottom: 30px;
     }
@@ -74,7 +74,7 @@ st.markdown(
 
 # Title and instructions with emojis
 st.markdown('<div class="title">✍🏻 Handwritten Digit Recognition 🔍</div>', unsafe_allow_html=True)
-st.markdown('<div class="draw-instruction">Draw a digit below, and our AI will guess it with confidence! 🤖✨</div>', unsafe_allow_html=True)
+st.markdown('<div class="instruction-text">Draw a digit below, and our AI will guess it with confidence! 🤖✨</div>', unsafe_allow_html=True)
 
 # Create a centered layout for the canvas and predictions
 col1, col2, col3 = st.columns([1, 2, 1])
@@ -143,7 +143,7 @@ if model:
 else:
     st.warning("The model could not be loaded, so predictions are unavailable at this time.")
 
-# Footer section
+# Footer section with updated text color
 st.markdown("---") 
 st.markdown(
     "<div class='footer'>🤖 | Brought to Life by - Harshal Kumawat | 🧑🏻‍💻</div>",
