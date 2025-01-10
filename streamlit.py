@@ -17,29 +17,40 @@ def load_model():
 # Load the model
 model = load_model()
 
+# Check the current theme (light or dark)
+current_theme = st.config.get_option("theme.base")
+
+# Set the text color based on the theme
+if current_theme == "dark":
+    title_color = "#FFFFFF"  # White for dark theme
+    footer_color = "#FFFFFF"  # White for dark theme
+else:
+    title_color = "#000000"  # Black for light theme
+    footer_color = "#000000"  # Black for light theme
+
 # Custom CSS for styling
 st.markdown(
-    """
+    f"""
     <style>
-    .title {
+    .title {{
         font-size: 45px;
-        color: #FF6347;
+        color: {title_color};
         text-align: center;
         font-weight: bold;
         padding-top: 20px;
-    }
-    .subtitle {
+    }}
+    .subtitle {{
         font-size: 20px;
-        color: #FFFFFF;
+        color: {title_color};
         text-align: center;
         margin-bottom: 30px;
-    }
-    .st-canvas {
+    }}
+    .st-canvas {{
         border: 3px solid #FF6347;
         border-radius: 10px;
         margin: 0 auto;
-    }
-    .prediction-box {
+    }}
+    .prediction-box {{
         font-size: 35px;
         color: #32CD32;
         text-align: center;
@@ -48,27 +59,27 @@ st.markdown(
         background-color: #F0F8FF;
         border-radius: 10px;
         margin-top: 20px;
-    }
-    .confidence-text {
+    }}
+    .confidence-text {{
         font-size: 18px;
         color: #20B2AA;
         text-align: center;
         font-style: italic;
-    }
-    .footer {
+    }}
+    .footer {{
         font-size: 15px;
-        color: #FFFFFF;
+        color: {footer_color};
         text-align: center;
         margin-top: 50px;
-    }
+    }}
     </style>
     """,
     unsafe_allow_html=True
 )
 
 # Title and instructions with emojis
-st.markdown('<div class="title">✍🏻 Handwritten Digit Recognition 🔍</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">Draw a digit below, and our AI will guess it with confidence! 🤖✨</div>', unsafe_allow_html=True)
+st.markdown(f'<div class="title">✍🏻 Handwritten Digit Recognition 🔍</div>', unsafe_allow_html=True)
+st.markdown(f'<div class="subtitle">Draw a digit below, and our AI will guess it with confidence! 🤖✨</div>', unsafe_allow_html=True)
 
 # Create a centered layout for the canvas and predictions
 col1, col2, col3 = st.columns([1, 2, 1])
@@ -140,6 +151,6 @@ else:
 # Footer section
 st.markdown("---") 
 st.markdown(
-    "<div class='footer'>🤖 | Brought to Life by - Harshal Kumawat | 🧑🏻‍💻</div>",
+    f"<div class='footer'>🤖 | Brought to Life by - Harshal Kumawat | 🧑🏻‍💻</div>",
     unsafe_allow_html=True
 )
