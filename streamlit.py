@@ -63,7 +63,6 @@ st.markdown(
     }
     .instruction-text {
         font-size: 20px;
-        color: #a9a9a9;
         text-align: center;
         margin-bottom: 30px;
     }
@@ -148,4 +147,4 @@ st.markdown("---")
 st.markdown(
     "<div class='footer'>🤖 | Brought to Life by - Harshal Kumawat | 🧑🏻‍💻</div>",
     unsafe_allow_html=True
-)
+                        )
