@@ -224,9 +224,9 @@ The plots below illustrate the training and validation accuracy and loss over th
 
 ### Model Performance
 
-- **Training Accuracy:** 97.06%
-- **Validation Accuracy:** 99.30%
-- **Test Accuracy:** 98.94%
+- **Training Accuracy:** `97.06%`
+- **Validation Accuracy:** `99.30%`
+- **Test Accuracy:** `98.94%`
 
 ### System Performance
 
