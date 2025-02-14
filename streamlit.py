@@ -71,15 +71,15 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Title and instructions with emojis
+
 st.markdown('<div class="title">✍🏻 Handwritten Digit Recognition 🔍</div>', unsafe_allow_html=True)
 st.markdown('<div class="instruction-text">Draw a digit below, and our AI will guess it with confidence! 🤖✨</div>', unsafe_allow_html=True)
 
-# Create a centered layout for the canvas and predictions
+#layout for the canvas and predictions
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    # Create a canvas for user input
+    # Canvas for user input
     canvas_result = st_canvas(
         stroke_width=10,
         stroke_color="#FFFFFF",
@@ -92,9 +92,7 @@ with col2:
 
 # Proceed with predictions only if the model is loaded successfully
 if model:
-    # Check for image data on the canvas before proceeding
     if canvas_result.image_data is not None:
-        # Check if the canvas is not completely blank
         if np.sum(canvas_result.image_data) > 0:
             if st.button("Predict Digit"):
                 try:
@@ -120,11 +118,14 @@ if model:
                         st.markdown(f'<div class="prediction-box">Predicted Digit: {predicted_class}</div>', unsafe_allow_html=True)
                         st.markdown(f'<div class="confidence-text">Confidence Level: {confidence:.2f}%</div>', unsafe_allow_html=True)
 
+                        # Show balloons as a celebratory effect
+                        st.balloons()
+
                         # Display the prediction probabilities bar chart
                         st.markdown("### 🔢 Prediction Probabilities")
                         fig, ax = plt.subplots()
                         bars = ax.bar(range(10), prediction[0], color="#4682B4", edgecolor="#4682B4")
-                        bars[predicted_class].set_color("#32CD32")  # Highlight the predicted digit
+                        bars[predicted_class].set_color("#32CD32") 
                         ax.set_xticks(range(10))
                         ax.set_xlabel("Digit", fontsize=12, fontweight='bold')
                         ax.set_ylabel("Probability", fontsize=12, fontweight='bold')
@@ -142,9 +143,9 @@ if model:
 else:
     st.warning("The model could not be loaded, so predictions are unavailable at this time.")
 
-# Footer section with updated text color
-st.markdown("---") 
+# Footer section 
+st.markdown("---")
 st.markdown(
     "<div class='footer'>🤖 | Brought to Life by - Harshal Kumawat | 🧑🏻‍💻</div>",
     unsafe_allow_html=True
-                        )
+)
