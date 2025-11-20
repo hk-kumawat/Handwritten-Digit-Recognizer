@@ -1,3 +1,5 @@
+<a id="readme-top"></a>
+
 <div align="center">
 
 # Handwritten Digit Recognizer
@@ -626,8 +628,9 @@ I'd love to hear your feedback, suggestions, or just connect!
 
 **If you found this helpful, please consider giving it a ⭐**
 
-<p align="center">
-  <a href="#readme-top">↑ Back to Top</a>
+
+<p align="right">
+  <a href="#readme-top">⬆️ Back to top</a>
 </p>
 
 </div>
